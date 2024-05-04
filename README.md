@@ -1,3 +1,17 @@
+# Next.js 실험실
+
+## 목적
+
+Next.js 에서 사용할 수 있는 기능, 외부라이브러리, 내가 만든 컴포넌트 방법들 정리하는 곳!
+
+## 기본 설치
+
+```bash
+    yarn create next-app --typescript
+```
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
