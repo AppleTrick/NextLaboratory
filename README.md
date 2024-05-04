@@ -10,6 +10,14 @@ Next.js 에서 사용할 수 있는 기능, 외부라이브러리, 내가 만든
     yarn create next-app --typescript
 ```
 
+### three.js 설치
+
+```bash
+    yarn add @types/three --dev
+    yarn add three
+
+```
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
