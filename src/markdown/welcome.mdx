@@ -10,3 +10,27 @@ This is a blog post written in **MDX**.
 ```python
 print('hello')
 ```
+
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Row 1    | Data 1   |
+| Row 2    | Data 2   |
+
+```typescript
+import Image from "next/image";
+import styles from "./imagepage.module.css";
+
+const ImagePage = () => {
+  return (
+    <div className={styles.imgcontainer}>
+      <Image className={styles.img} src="/ann.jpg" alt="" fill />
+    </div>
+  );
+};
+
+export default ImagePage;
+```
