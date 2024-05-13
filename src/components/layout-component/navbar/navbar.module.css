@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.logo{
+
+}
+
+.link{
+
+}
+
+.otherside{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
