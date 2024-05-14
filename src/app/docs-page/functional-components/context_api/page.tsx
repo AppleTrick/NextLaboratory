@@ -1,5 +1,12 @@
-const FunctionalComponents = () => {
-  return <div>FunctionalComponents</div>;
+import { NewContextProvider } from "./components/NewContextProvider";
+import SampleButton from "./components/SampleButton";
+
+const ContextApi = () => {
+  return (
+    <NewContextProvider>
+      <SampleButton />
+    </NewContextProvider>
+  );
 };
 
-export default FunctionalComponents;
+export default ContextApi;
