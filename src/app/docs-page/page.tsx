@@ -1,9 +1,9 @@
 const docsPage = () => {
   return (
     <div>
-      <div>functional-component</div>
-      <div>ui-component</div>
-      <div>specital-component</div>
+      <div>functional-components</div>
+      <div>ui-components</div>
+      <div>sspecial-components</div>
     </div>
   );
 };
