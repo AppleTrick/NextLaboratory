@@ -1,5 +1,12 @@
-const ToggleThemeComponent = () => {
-  return <div>ToggleThemeComponent</div>;
+import ToggleThemeComponent from "./components/ToggleThemeComponent";
+
+const page = () => {
+  return (
+    <div>
+      <div>토글 컴포넌트 입니다.</div>
+      <ToggleThemeComponent />
+    </div>
+  );
 };
 
-export default ToggleThemeComponent;
+export default page;
