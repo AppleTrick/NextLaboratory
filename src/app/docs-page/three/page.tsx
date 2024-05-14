@@ -1,4 +1,4 @@
-import ThreeScene from "@/components/three/ThreeScene";
+import ThreeScene from "./components/ThreeScene";
 
 const three = () => {
   return (
