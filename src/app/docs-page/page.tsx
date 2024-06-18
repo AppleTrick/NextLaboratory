@@ -3,7 +3,7 @@ const docsPage = () => {
     <div>
       <div>functional-components</div>
       <div>ui-components</div>
-      <div>sspecial-components</div>
+      <div>special-components</div>
     </div>
   );
 };

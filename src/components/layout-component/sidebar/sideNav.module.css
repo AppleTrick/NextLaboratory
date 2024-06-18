@@ -1,0 +1,22 @@
+.sidebar {
+  width: 256px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 24px;
+  gap: 10px;
+  border-radius: 30px;
+}
+
+.menuTitle {
+  font-size: 10px;
+  font-weight: 500;
+  color: #757575;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 20px;
+}
