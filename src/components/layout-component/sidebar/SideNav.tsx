@@ -21,7 +21,7 @@ const SideNav = () => {
                 { href: '', text: 'Subscribers' },
               ]}
             />
-            <NavItem href="" icon={<FaHome className={styles.icon} />} text="Posts" isActive />
+            <NavItem href="" icon={<FaHome className={styles.icon} />} text="Posts" />
             <NavItem href="" icon={<FaHome className={styles.icon} />} text="Schedules" />
             <NavItem
               href=""

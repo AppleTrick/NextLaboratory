@@ -3,11 +3,12 @@ import Link from 'next/link';
 
 interface SubMenuProps {
   items: { href: string; text: string }[];
+  isSubMenuOpen: boolean;
 }
 
-const SubMenu: React.FC<SubMenuProps> = ({ items }) => {
+const SubMenu: React.FC<SubMenuProps> = ({ items, isSubMenuOpen }) => {
   return (
-    <ul className={styles.subMenu}>
+    <ul className={`${styles.subMenu} ${isSubMenuOpen ? styles.subMenuOpen : styles.subMenuClose}`}>
       {items.map((item, index) => (
         <li key={index} className={styles.li}>
           <Link className={`${styles.link} ${styles.subMenuLink}`} href={item.href}>
