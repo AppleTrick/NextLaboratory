@@ -8,32 +8,40 @@ const SideNav = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const menuItems = [
-    { index: 0, href: '', icon: <FaHome className={styles.icon} />, text: 'DashBoard' },
     {
-      index: 1,
+      index: 0,
       href: '',
       icon: <FaUsers className={styles.icon} />,
-      text: 'Audience',
+      text: 'functional-components',
       subMenu: [
         { href: '', text: 'Users' },
         { href: '', text: 'Subscribers' },
       ],
     },
-    { index: 2, href: '', icon: <FaHome className={styles.icon} />, text: 'Posts' },
-    { index: 3, href: '', icon: <FaHome className={styles.icon} />, text: 'Schedules' },
     {
-      index: 4,
+      index: 1,
       href: '',
       icon: <FaUsers className={styles.icon} />,
-      text: 'Income',
+      text: 'special-components',
       subMenu: [
-        { href: '', text: 'Earnings' },
-        { href: '', text: 'Funds' },
-        { href: '', text: 'Declines' },
-        { href: '', text: 'Payments' },
+        { href: '', text: 'Users' },
+        { href: '', text: 'Subscribers' },
+      ],
+    },
+    {
+      index: 2,
+      href: '',
+      icon: <FaUsers className={styles.icon} />,
+      text: 'UI-components',
+      subMenu: [
+        { href: '', text: 'Users' },
+        { href: '', text: 'Subscribers' },
       ],
     },
   ];
+
+  const settingItems = [{ index: 5, href: '', icon: <FaHome className={styles.icon} />, text: 'Setting' }];
+  const accountItems = [{ index: 6, href: '', icon: <FaHome className={styles.icon} />, text: 'Help' }];
 
   const handleNavItemClick = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -60,6 +68,22 @@ const SideNav = () => {
             ))}
           </ul>
         </div>
+        <div className={styles.menu}>
+          <p className={styles.menuTitle}>setting</p>
+          <ul>
+            {settingItems.map((item) => (
+              <NavItem key={item.index} index={item.index} href={item.href} icon={item.icon} text={item.text} isActive={activeIndex === item.index} onClick={() => handleNavItemClick(item.index)} />
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className={styles.menu}>
+        <p className={styles.menuTitle}>Account</p>
+        <ul>
+          {accountItems.map((item) => (
+            <NavItem key={item.index} index={item.index} href={item.href} icon={item.icon} text={item.text} isActive={activeIndex === item.index} onClick={() => handleNavItemClick(item.index)} />
+          ))}
+        </ul>
       </div>
     </div>
   );
