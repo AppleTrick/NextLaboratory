@@ -15,7 +15,7 @@
   border-radius: 8px;
   transition: all 0.3s;
 }
-
+.active,
 .link:hover {
   color: #000;
   background-color: #b5b5b5;
