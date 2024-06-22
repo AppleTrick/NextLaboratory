@@ -8,7 +8,7 @@ interface SubMenuProps {
 
 const SubMenu: React.FC<SubMenuProps> = ({ items, isSubMenuOpen }) => {
   return (
-    <ul className={`${styles.subMenu} ${isSubMenuOpen ? styles.subMenuOpen : styles.subMenuClose}`}>
+    <ul className={`${styles.subMenu} ${isSubMenuOpen ? styles.open : styles.close}`}>
       {items.map((item, index) => (
         <li key={index} className={styles.li}>
           <Link className={`${styles.link} ${styles.subMenuLink}`} href={item.href}>

@@ -30,11 +30,11 @@
   animation-fill-mode: forwards;
 }
 
-.subMenuOpen {
+.open {
   animation-name: slideDown;
 }
 
-.subMenuClose {
+.close {
   animation-name: slideUp;
 }
 
@@ -63,7 +63,7 @@
 
 .link:hover {
   color: #000;
-  background-color: #5b5b5b;
+  background-color: #b5b5b5;
 }
 
 .text {
