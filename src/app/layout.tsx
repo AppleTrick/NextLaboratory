@@ -17,10 +17,10 @@ export default function RootLayout({
     <RecoilRoot>
       <html lang="en">
         <body className={inter.className}>
-          <SideNav />
           <div className="container">
+            <SideNav />
             <div className="wrapper">
-              <Navbar />
+              {/* <Navbar /> */}
               {children}
             </div>
           </div>

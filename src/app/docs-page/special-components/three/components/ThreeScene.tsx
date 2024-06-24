@@ -1,17 +1,23 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import * as THREE from "three";
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
-const ThreeScene = () => {
-  const ref = useRef<HTMLDivElement>(null);
+const ThreeScene: React.FC = () => {
+  const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!mountRef.current) return;
+
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    ref.current?.appendChild(renderer.domElement);
+    const width = mountRef.current.clientWidth;
+    const height = mountRef.current.clientHeight;
+    // const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000); // 비율을 renderer 크기와 동일하게 설정
+    // renderer.setSize(window.innerWidth, window.innerHeight); // 해당코드는 화면의 최대 가로 , 최대 세로로 정의했음
+    renderer.setSize(width, height);
+    mountRef.current?.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
@@ -30,11 +36,11 @@ const ThreeScene = () => {
     animate();
 
     return () => {
-      ref.current?.removeChild(renderer.domElement);
+      mountRef.current?.removeChild(renderer.domElement);
     };
   }, []);
 
-  return <div ref={ref} />;
+  return <div ref={mountRef} style={{ width: '800px', height: '600px' }} />;
 };
 
 export default ThreeScene;

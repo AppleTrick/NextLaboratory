@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRef, useEffect, useState } from "react";
-import * as THREE from "three";
-import * as TWEEN from "@tweenjs/tween.js";
-import { Easing } from "@tweenjs/tween.js";
+import { useRef, useEffect, useState } from 'react';
+import * as THREE from 'three';
+import * as TWEEN from '@tweenjs/tween.js';
+import { Easing } from '@tweenjs/tween.js';
 
 type Seat = THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>;
 
@@ -60,19 +60,12 @@ const ThreeCinema: React.FC = () => {
     screen.position.y = 7.5;
     scene.add(screen);
 
-    screenPositionRef.current = new THREE.Vector3(
-      screen.position.x,
-      screen.position.y,
-      screen.position.z
-    );
+    screenPositionRef.current = new THREE.Vector3(screen.position.x, screen.position.y, screen.position.z);
 
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
-    function animateCamera(
-      toPosition: THREE.Vector3,
-      lookAtPosition: THREE.Vector3
-    ) {
+    function animateCamera(toPosition: THREE.Vector3, lookAtPosition: THREE.Vector3) {
       if (!cameraRef.current) return;
 
       const camera = cameraRef.current;
@@ -167,8 +160,8 @@ const ThreeCinema: React.FC = () => {
       }
     };
 
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("click", onMouseClick);
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('click', onMouseClick);
 
     const animate = () => {
       requestAnimationFrame(animate);
@@ -179,8 +172,8 @@ const ThreeCinema: React.FC = () => {
 
     return () => {
       if (!mountRef.current) return;
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("click", onMouseClick);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('click', onMouseClick);
       mountRef.current.removeChild(renderer.domElement);
     };
   }, []);
@@ -220,12 +213,9 @@ const ThreeCinema: React.FC = () => {
 
   return (
     <div>
-      <div ref={mountRef} style={{ width: "800px", height: "600px" }} />
+      <div ref={mountRef} style={{ width: '800px', height: '600px' }} />
       {isDetailView && (
-        <button
-          onClick={handleBackClick}
-          style={{ position: "absolute", top: 20, left: 20 }}
-        >
+        <button onClick={handleBackClick} style={{ top: 20, left: 20 }}>
           Back
         </button>
       )}

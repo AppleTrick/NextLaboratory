@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './navItem.module.css';
 import { FaAngleDown } from 'react-icons/fa';
 import SubMenu from '../subMenu/SubMenu';
+import Link from 'next/link';
 
 interface NavItemProps {
   index: number;
@@ -33,11 +34,22 @@ const NavItem: React.FC<NavItemProps> = ({ href, icon, text, subMenu, isActive, 
 
   return (
     <li className={`${styles.li}`}>
-      <div className={`${styles.link} ${isActive ? styles.active : ''}`} onClick={handleItemClick}>
-        {icon}
-        <span className={styles.text}>{text}</span>
-        {subMenu && <FaAngleDown className={`${styles.arrow} ${isSubMenuOpen ? styles.rotate : ''}`} />}
-      </div>
+      {!subMenu ? (
+        <Link href={href}>
+          <div className={`${styles.link} ${isActive ? styles.active : ''}`} onClick={handleItemClick}>
+            {icon}
+            <span className={styles.text}>{text}</span>
+            {subMenu && <FaAngleDown className={`${styles.arrow} ${isSubMenuOpen ? styles.rotate : ''}`} />}
+          </div>
+          {subMenu && isInitialRender && <SubMenu items={subMenu} isSubMenuOpen={isSubMenuOpen} />}
+        </Link>
+      ) : (
+        <div className={`${styles.link} ${isActive ? styles.active : ''}`} onClick={handleItemClick}>
+          {icon}
+          <span className={styles.text}>{text}</span>
+          {subMenu && <FaAngleDown className={`${styles.arrow} ${isSubMenuOpen ? styles.rotate : ''}`} />}
+        </div>
+      )}
       {subMenu && isInitialRender && <SubMenu items={subMenu} isSubMenuOpen={isSubMenuOpen} />}
     </li>
   );

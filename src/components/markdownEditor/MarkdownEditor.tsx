@@ -1,31 +1,24 @@
-import markdownIt from "markdown-it"
-import dynamic from "next/dynamic";
-import 'react-markdown-editor-lite/lib/index.css'
+import markdownIt from 'markdown-it';
+import dynamic from 'next/dynamic';
+import 'react-markdown-editor-lite/lib/index.css';
 
-const mdParser = new markdownIt
+const mdParser = new markdownIt();
 
 const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {
-    ssr: false,
-  });
+  ssr: false,
+});
 
 interface EditorChange {
-    html : string;
-    text : string
+  html: string;
+  text: string;
 }
 
 const MarkdownEditor = () => {
+  const handleEditorChange = ({ html, text }: EditorChange) => {
+    console.log(html, text);
+  };
 
-    const handleEditorChange = ( {html, text} : EditorChange) => {
-        console.log(html , text);
-    }
+  return <MdEditor style={{ height: '500px', width: '1000px' }} renderHTML={(text) => mdParser.render(text)} onChange={handleEditorChange} />;
+};
 
-    return (
-       <MdEditor
-            style={{height : "500px"}}
-            renderHTML={(text) => mdParser.render(text)}
-            onChange={handleEditorChange}
-       />
-    )
-}
-
-export default MarkdownEditor
+export default MarkdownEditor;

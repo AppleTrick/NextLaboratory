@@ -10,33 +10,37 @@ const SideNav = () => {
   const menuItems = [
     {
       index: 0,
-      href: '',
+      href: '/docs-page/functional-components',
       icon: <FaUsers className={styles.icon} />,
       text: 'functional-components',
-      subMenu: [
-        { href: '', text: 'Users' },
-        { href: '', text: 'Subscribers' },
-      ],
+      subMenu: [{ href: '/docs-page/functional-components/context_api', text: 'Context API' }],
     },
     {
       index: 1,
-      href: '',
+      href: '/docs-page/special-components',
       icon: <FaUsers className={styles.icon} />,
       text: 'special-components',
       subMenu: [
-        { href: '', text: 'Users' },
-        { href: '', text: 'Subscribers' },
+        { href: '/docs-page/special-components/mdx-page', text: 'mdx-page' },
+        { href: '/docs-page/special-components/react-editor', text: 'react-editor' },
+        { href: '/docs-page/special-components/three', text: 'three' },
       ],
     },
     {
       index: 2,
-      href: '',
+      href: '/docs-page/ui-components',
       icon: <FaUsers className={styles.icon} />,
       text: 'UI-components',
       subMenu: [
         { href: '', text: 'Users' },
         { href: '', text: 'Subscribers' },
       ],
+    },
+    {
+      index: 3,
+      href: '/docs-page/three_movie',
+      icon: <FaUsers className={styles.icon} />,
+      text: 'movieComponents',
     },
   ];
 
@@ -52,7 +56,7 @@ const SideNav = () => {
       <SidebarHeader />
       <div className={styles.nav}>
         <div className={styles.menu}>
-          <p className={styles.menuTitle}>Main</p>
+          <p className={styles.menuTitle}>Components</p>
           <ul>
             {menuItems.map((item) => (
               <NavItem
