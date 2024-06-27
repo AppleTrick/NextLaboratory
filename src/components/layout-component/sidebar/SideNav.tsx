@@ -24,6 +24,7 @@ const SideNav = () => {
         { href: '/docs-page/special-components/mdx-page', text: 'mdx-page' },
         { href: '/docs-page/special-components/react-editor', text: 'react-editor' },
         { href: '/docs-page/special-components/three', text: 'three' },
+        { href: '/docs-page/special-components/ocrimagepaste', text: 'OcrImagePaste' },
       ],
     },
     {
