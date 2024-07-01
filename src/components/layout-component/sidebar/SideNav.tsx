@@ -31,7 +31,7 @@ const SideNav = () => {
       index: 2,
       href: '/docs-page/ui-components',
       icon: <FaUsers className={styles.icon} />,
-      text: 'UI-components',
+      text: 'ui-components',
       subMenu: [
         { href: '', text: 'Users' },
         { href: '', text: 'Subscribers' },
