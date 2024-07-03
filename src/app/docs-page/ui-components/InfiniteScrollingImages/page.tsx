@@ -9,7 +9,7 @@ const scroll = keyframes`
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-153%);
+    transform: translateX(calc(-300px * 7));
   }
 `;
 
@@ -22,13 +22,14 @@ const ImageContainer = styled.div`
 
 const ImageTrack = styled.div`
   display: flex;
+  width: calc(300px * 14);
   animation: ${scroll} 5s linear infinite;
 `;
 
 const StyledImage = styled(Image)`
   width: 300px;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   flex-shrink: 0;
 `;
 
