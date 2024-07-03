@@ -33,8 +33,8 @@ const SideNav = () => {
       icon: <FaUsers className={styles.icon} />,
       text: 'ui-components',
       subMenu: [
-        { href: '', text: 'Users' },
-        { href: '', text: 'Subscribers' },
+        { href: '/docs-page/ui-components/InfiniteScrollingImages', text: 'InfiniteScrollingImage' },
+        { href: '/docs-page/ui-components/toggleThemeComponent', text: 'ToogleThemeComponent' },
       ],
     },
     {

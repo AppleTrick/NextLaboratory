@@ -6,11 +6,11 @@ import { MDXComponentsProvider } from '@/mdx/mdx-provider';
 
 export default function Page() {
   return (
-    <>
+    <div style={{ width: '1000px' }}>
       <MDXComponentsProvider>
         <Welcome />
         <Test />
       </MDXComponentsProvider>
-    </>
+    </div>
   );
 }
