@@ -35,6 +35,7 @@ const SideNav = () => {
       subMenu: [
         { href: '/docs-page/ui-components/InfiniteScrollingImages', text: 'InfiniteScrollingImage' },
         { href: '/docs-page/ui-components/toggleThemeComponent', text: 'ToogleThemeComponent' },
+        { href: '/docs-page/ui-components/ToolTip', text: 'ToolTip' },
       ],
     },
     {
