@@ -7,6 +7,7 @@ type StylesProps = {
 export const ToolTipWrapper = styled.div`
   position: relative;
   display: flex;
+  align-items: center;
   &:hover > div {
     visibility: visible;
   }
@@ -52,8 +53,7 @@ export const ToolTip = styled.div<StylesProps>`
     props.type === 'left' &&
     css`
       transform: translateX(-90%);
-    `}
-
+    `} 
   &::after {
     content: '';
     position: absolute;
@@ -64,7 +64,7 @@ export const ToolTip = styled.div<StylesProps>`
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: #232323;
+    background-color: #595959;
     opacity: 0.8;
     z-index: -1;
   }

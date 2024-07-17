@@ -8,18 +8,20 @@ const SideNav = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const menuItems = [
+    // 함수 컴포넌트
     {
       index: 0,
       href: '/docs-page/functional-components',
       icon: <FaUsers className={styles.icon} />,
-      text: 'functional-components',
+      text: '함수 컴포넌트',
       subMenu: [{ href: '/docs-page/functional-components/context_api', text: 'Context API' }],
     },
+    // 외부 라이브러리 참조한 컴포넌트
     {
       index: 1,
       href: '/docs-page/special-components',
       icon: <FaUsers className={styles.icon} />,
-      text: 'special-components',
+      text: '스페셜 컴포넌트',
       subMenu: [
         { href: '/docs-page/special-components/mdx-page', text: 'mdx-page' },
         { href: '/docs-page/special-components/react-editor', text: 'react-editor' },
@@ -27,23 +29,24 @@ const SideNav = () => {
         { href: '/docs-page/special-components/ocrimagepaste', text: 'OcrImagePaste' },
       ],
     },
+    // UI로서 응용할 수 있는 컴포넌트
     {
       index: 2,
       href: '/docs-page/ui-components',
       icon: <FaUsers className={styles.icon} />,
-      text: 'ui-components',
+      text: 'UI 컴포넌트',
       subMenu: [
         { href: '/docs-page/ui-components/InfiniteScrollingImages', text: 'InfiniteScrollingImage' },
         { href: '/docs-page/ui-components/toggleThemeComponent', text: 'ToogleThemeComponent' },
         { href: '/docs-page/ui-components/ToolTip', text: 'ToolTip' },
       ],
     },
-    {
-      index: 3,
-      href: '/docs-page/three_movie',
-      icon: <FaUsers className={styles.icon} />,
-      text: 'movieComponents',
-    },
+    // {
+    //   index: 3,
+    //   href: '/docs-page/three_movie',
+    //   icon: <FaUsers className={styles.icon} />,
+    //   text: 'movieComponents',
+    // },
   ];
 
   const settingItems = [{ index: 5, href: '', icon: <FaHome className={styles.icon} />, text: 'Setting' }];

@@ -6,12 +6,12 @@ import { MDXComponentsProvider } from '@/mdx/mdx-provider';
 
 const ISI = () => {
   return (
-    <div>
+    <>
       <InfiniteScrollingImages />
       <MDXComponentsProvider>
         <Description />
       </MDXComponentsProvider>
-    </div>
+    </>
   );
 };
 

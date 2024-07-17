@@ -11,6 +11,9 @@ const ToolTipShowDiv = styled.div`
 `;
 
 const ToolTipShow = () => {
+  const sampleText =
+    '깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것깃주소는 매우매우 아름다운 것';
+
   return (
     <div>
       <h1> ToolTip Component</h1>
@@ -31,7 +34,7 @@ const ToolTipShow = () => {
           </ToolTipComponents>
         </div>
         <div>
-          <ToolTipComponents type="bottom" content="블로그">
+          <ToolTipComponents type="bottom" content={sampleText}>
             <button>깃주소</button>
           </ToolTipComponents>
         </div>
