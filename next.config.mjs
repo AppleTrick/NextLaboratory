@@ -1,14 +1,24 @@
 // next.config.mjs
-import createMDX from "@next/mdx";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
+import createMDX from '@next/mdx';
+import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
 
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     appDir: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tesseract.projectnaptha.com',
+        port: '',
+        pathname: '/img/**',
+      },
+    ],
   },
 };
 

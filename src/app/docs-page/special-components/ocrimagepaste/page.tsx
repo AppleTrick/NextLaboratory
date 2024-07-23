@@ -53,7 +53,7 @@ const OcrImagePaste: React.FC = () => {
 
   return (
     <div>
-      <h1>Paste an Image and Extract Text</h1>
+      <h1>OCR 기능 사용하기</h1>
       <img ref={imageRef} alt="Pasted" style={{ maxWidth: '100%', maxHeight: '400px' }} />
       <textarea value={text} readOnly style={{ width: '100%', height: '200px' }} />
     </div>
