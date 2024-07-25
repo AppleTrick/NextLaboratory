@@ -2,9 +2,10 @@
 
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/layout-component/navbar/Navbar';
 import { RecoilRoot } from 'recoil';
 import SideNav from '@/components/layout-component/sidebar/SideNav';
+import '@mantine/core/styles.css';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,12 +17,14 @@ export default function RootLayout({
   return (
     <RecoilRoot>
       <html lang="en">
+        <head>
+          <ColorSchemeScript />
+        </head>
         <body className={inter.className}>
           <div className="container">
             <SideNav />
             <div className="wrapper">
-              {/* <Navbar /> */}
-              {children}
+              <MantineProvider>{children}</MantineProvider>
             </div>
           </div>
         </body>
