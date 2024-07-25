@@ -9,7 +9,9 @@ const testpage = () => {
   const [hocr, setHocr] = useState<string>('');
 
   const ocrSubmit = async () => {
-    const worker = await createWorker('eng'); // 언어 설정 할수 있는 부분
+    const worker = await createWorker('eng', 1, {
+      logger: (m) => console.log(m),
+    }); // 언어 설정 할수 있는 부분
 
     (async () => {
       // 특정 문자 or 숫자 뽑아내기
