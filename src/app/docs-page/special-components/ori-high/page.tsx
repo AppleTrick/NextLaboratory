@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Tesseract, { createWorker } from 'tesseract.js';
 
 const Home = () => {
-  const [imageData, setImageData] = useState<File | null>(null);
+  const [imageData, setImageData] = useState<string | null>(null);
 
   const loadFile = (file: File) => {
     const reader = new FileReader();
@@ -24,21 +24,6 @@ const Home = () => {
   const [ocrResult, setOcrResult] = useState('');
 
   const workerRef = useRef<Tesseract.Worker | null>(null);
-  // useEffect(() => {
-  //   const initializeWorker = async () => {
-  //     workerRef.current = await createWorker(['eng', 'kor'], 1, {
-  //       logger: (m) => console.log(m),
-  //     });
-  //   };
-  //   if (imageData) {
-  //     initializeWorker();
-  //   }
-
-  //   return () => {
-  //     workerRef.current?.terminate();
-  //     workerRef.current = null;
-  //   };
-  // }, [imageData]);
 
   const handleExtract = async () => {
     setProgress(0);
@@ -82,10 +67,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// logger: (message) => {
-//   if ('progress' in message) {
-//     setProgress(message.progress);
-//     setProgressLabel(message.progress == 1 ? 'Done' : message.status);
-//   }
-// },
